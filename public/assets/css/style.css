@@ -1,0 +1,227 @@
+body {
+	margin: 0;
+	padding: 0;
+    display: flex;
+    background: url('inception.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Arial;
+	color: #68707d;
+}
+
+header {
+    padding: 5px;
+	text-align: center;
+	margin: 0;
+	font-size: 1em;
+	color: #68707d;
+	border-radius: 4px;
+	background: #FFFFFF;
+}
+
+section.wrapper {
+	margin: 25px;
+	flex: 1;
+}
+
+/* Navigation */
+aside {
+	position: fixed;
+	top: 25px;
+	right: 25px;
+    width: 220px;
+    font-size: 1.2em;
+}
+
+aside nav {
+	margin: 5px 0px;
+	border-radius: 4px;
+	background: #FFFFFF;
+	font-size: 0.9em;
+}
+
+aside nav h1 {
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	margin: 0;
+	font-size: 1em;
+	color: #68707d;
+}
+
+aside nav input {
+	width: 180px;
+	padding: 10px;
+	border: 0;
+    
+    width: calc(100% - 20px);
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.9em;
+	background: #FFFFFF;
+}
+
+aside nav ul {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+}
+
+aside nav li {
+    padding: 10px;
+	display: flex;
+	font-weight: bold;
+	font-size: 0.9em;
+	list-style: none;
+	color: #68707D;
+}
+
+aside nav li span {
+	flex: 2;
+}
+
+aside nav li i {
+	flex: 1;
+	text-align: right;
+}
+
+div.movie {
+    max-width: 700px;
+	display: flex;
+    font-size: 1.2em;
+	color: #68707d;
+	margin-bottom: 25px;
+}
+
+div.movie ul.category {
+	width: 50px;
+	margin: 0;
+	margin-right: 15px;
+	padding: 0;
+	font-size: 0.8em;
+}
+
+div.movie ul.category li {
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 2px;
+	background: #FFFFFF;
+}
+
+div.movie article {
+	padding: 10px;
+    border-radius: 2px;
+	background: #FFFFFF;
+	display: grid;
+	grid-template-areas: 
+		'title title'
+		'poster plot'
+		'poster actor'
+		'action action';
+	grid-gap: 10px;
+}
+
+div.movie h1 {
+	grid-area: title;
+	margin: 0;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 1em;
+	border-bottom: 1px solid #C4C5C9;
+}
+
+div.movie img {
+	grid-area: poster;
+	width:200px;
+	height:auto;
+}
+
+div.movie p {
+	grid-area: plot;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+div.movie ul.actor {
+	grid-area: actor;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+} 
+
+div.movie ul.actor li {
+	list-style: none;
+	display: inline-block;
+	padding: 2px;
+	border-radius: 2px;
+	background: #EBEBEB;
+}
+
+div.movie ul.action {
+	grid-area: action;
+}
+
+ul.action {
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+} 
+
+ul.action li {
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 2px;
+	background: #EBEBEB
+}
+
+/* Tooltip */
+/*.arrow::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #c4c5c9 transparent transparent transparent;
+}*/
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+	font-size: 0.8em;
+    visibility: hidden;
+    width: 120px;
+    height: auto;
+    margin: 0;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
